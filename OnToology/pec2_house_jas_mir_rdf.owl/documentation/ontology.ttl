@@ -1,0 +1,606 @@
+@prefix : <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#> .
+
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house> rdf:type owl:Ontology ;
+                                                               rdfs:comment """A  House MD dataset
+authors: Jaime Aguilá, Manuel Ibáñez""" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode
+:belongsToEpisode rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasScript ;
+                  rdfs:domain :Script ;
+                  rdfs:range :Episode ;
+                  rdfs:comment "A script belongs to an episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason
+:belongsToSeason rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :hasEpisode ;
+                 rdfs:domain :Episode ;
+                 rdfs:range :Season ;
+                 rdfs:comment "An episode belongs to a season" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs
+:directs rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isDirectedBy ;
+         rdfs:domain :Director ;
+         rdfs:range :Episode ;
+         rdfs:comment "A director directs an episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode
+:hasEpisode rdf:type owl:ObjectProperty ;
+            rdfs:domain :Season ;
+            rdfs:range :Episode ;
+            rdfs:comment "A season has episodes" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine
+:hasLine rdf:type owl:ObjectProperty ;
+         rdfs:domain :ScriptPiece ;
+         rdfs:range :Line ;
+         rdfs:comment "A script piece has lines" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript
+:hasScript rdf:type owl:ObjectProperty ;
+           rdfs:domain :Episode ;
+           rdfs:range :Script ;
+           rdfs:comment "An episode has a script" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom
+:hasSymptom rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isSymptomOf ;
+            rdfs:domain :Disease ;
+            rdfs:range :Symptom ;
+            rdfs:comment "A disease has symptom" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy
+:isDirectedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Episode ;
+              rdfs:range :Director ;
+              rdfs:comment "An episode is directed by a director" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy
+:isPlayedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :plays ;
+            rdfs:domain :Character ;
+            rdfs:range :Actor ;
+            rdfs:comment "A character is played by an actor in a episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf
+:isSymptomOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Symptom ;
+             rdfs:range :Disease ;
+             rdfs:comment "A symptom is from a disease" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf
+:isTreatmentOf rdf:type owl:ObjectProperty ;
+               owl:inverseOf :itTreatsWith ;
+               rdfs:domain :Treatment ;
+               rdfs:range :Disease ;
+               rdfs:comment "A treatment treats a disease" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy
+:isWrittenBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :writes ;
+             rdfs:domain :Script ;
+             rdfs:range :Writer ;
+             rdfs:comment "A script is written by writers" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith
+:itTreatsWith rdf:type owl:ObjectProperty ;
+              rdfs:domain :Disease ;
+              rdfs:range :Treatment ;
+              rdfs:comment "A disease is treated by a treatment" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays
+:plays rdf:type owl:ObjectProperty ;
+       rdfs:domain :Actor ;
+       rdfs:range :Character ;
+       rdfs:comment "An actor plays a character in a episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine
+:saysALine rdf:type owl:ObjectProperty ;
+           rdfs:domain :Character ;
+           rdfs:range :Line ;
+           rdfs:comment "A character says the line in a piece of script" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes
+:writes rdf:type owl:ObjectProperty ;
+        rdfs:domain :Writer ;
+        rdfs:range :Script ;
+        rdfs:comment "A writer writes a script" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code
+:code rdf:type owl:DatatypeProperty ;
+      rdfs:domain :ScriptPiece ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Code of the piece of a script" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber
+:episodeNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Episode ;
+               rdfs:range xsd:positiveInteger ;
+               rdfs:comment "Number of the episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes
+:episodes rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Season ;
+          rdfs:range xsd:positiveInteger ;
+          rdfs:comment "Number of episodes of the season" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Name of a person" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order
+:order rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Line ;
+       rdfs:range xsd:positiveInteger ;
+       rdfs:comment "Order of the line in a script piece" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber
+:seasonNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Season ;
+              rdfs:range xsd:positiveInteger ;
+              rdfs:comment "Number of the season" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence
+:sentence rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Line ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Interaction in a monologue or a dialogue by an actor" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Episode ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Title of an episode" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor
+:Actor rdf:type owl:Class ;
+       rdfs:subClassOf :Person ;
+       owl:disjointWith :Character ;
+       rdfs:comment "Person who acts in a episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character
+:Character rdf:type owl:Class ;
+           rdfs:subClassOf :Person ;
+           owl:disjointWith :Director ,
+                            :Writer ;
+           rdfs:comment "Person played by an actor in a episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day
+:Day rdf:type owl:Class ;
+     rdfs:subClassOf :Time ;
+     rdfs:comment "Day of the month" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis
+:Diagnosis rdf:type owl:Class ;
+           rdfs:comment "Identification of an illness by examination of the symptoms" ;
+           rdfs:sameAs "http://purl.bioontology.org/ontology/SNOMEDCT/439401001"^^xsd:anyURI ,
+                       "https://dbpedia.org/page/Diagnosis"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue
+:Dialogue rdf:type owl:Class ;
+          rdfs:subClassOf :ScriptPiece ;
+          owl:disjointWith :Monologue ;
+          rdfs:comment "Conversation between 2 or more actors" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director
+:Director rdf:type owl:Class ;
+          rdfs:subClassOf :Person ;
+          rdfs:comment "Person who directs an episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease
+:Disease rdf:type owl:Class ;
+         rdfs:comment "A disorder of structure or function in a person that produces specific symptoms" ;
+         rdfs:sameAs "http://purl.bioontology.org/ontology/SNOMEDCT/64572001"^^xsd:anyURI ,
+                     "https://dbpedia.org/page/Disease"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode
+:Episode rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :belongsToSeason ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Season
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasScript ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Script
+                         ] ;
+         rdfs:comment "Each of the separate programs into which House M. D. is divided." .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour
+:Hour rdf:type owl:Class ;
+      rdfs:subClassOf :Time ;
+      rdfs:comment "Hour of the day" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line
+:Line rdf:type owl:Class ;
+      rdfs:comment "Line of a dialogue o monologue sayed by a character" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue
+:Monologue rdf:type owl:Class ;
+           rdfs:subClassOf :ScriptPiece ;
+           rdfs:comment "Speech by one actor" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month
+:Month rdf:type owl:Class ;
+       rdfs:subClassOf :Time ;
+       rdfs:comment "Month of the year" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "A human being" ;
+        rdfs:sameAs "http://purl.bioontology.org/ontology/SNOMEDCT/125676002"^^xsd:anyURI ,
+                    "https://dbpedia.org/page/Person"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship
+:Relationship rdf:type owl:Class ;
+              rdfs:comment "The way in which two characters are connected" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script
+:Script rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :isWrittenBy ;
+                          owl:someValuesFrom :Writer
+                        ] ;
+        rdfs:comment "The text of a episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece
+:ScriptPiece rdf:type owl:Class ;
+             rdfs:comment "Piece of a script" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season
+:Season rdf:type owl:Class ;
+        rdfs:comment "A set of episodes" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom
+:Symptom rdf:type owl:Class ;
+         rdfs:comment "Physical or mental feature which is regarded as indicating a condition of disease" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test
+:Test rdf:type owl:Class ;
+      rdfs:comment "A procedure used to identify a disease" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time
+:Time rdf:type owl:Class ;
+      rdfs:comment "Date and time" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment
+:Treatment rdf:type owl:Class ;
+           rdfs:comment "Medical care given to a patient for a disease" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer
+:Writer rdf:type owl:Class ;
+        rdfs:subClassOf :Person ;
+        rdfs:comment "Person who writes the script of an episode" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year
+:Year rdf:type owl:Class ;
+      rdfs:subClassOf :Time ;
+      rdfs:comment "Year" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1
+:Act1 rdf:type owl:NamedIndividual ,
+               :Actor ;
+      :plays :Cha2 ;
+      :name "Hugh Laurie" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2
+:Act2 rdf:type owl:NamedIndividual ,
+               :Actor ;
+      :plays :Cha3 ;
+      :name "Robert Sean Leonard" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3
+:Act3 rdf:type owl:NamedIndividual ,
+               :Actor ;
+      :plays :Cha1 ;
+      :name "Lisa Edelstein" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1
+:Cha1 rdf:type owl:NamedIndividual ,
+               :Character ;
+      :isPlayedBy :Act3 ;
+      :saysALine :Line1 ;
+      :name "Lisa Cuddy" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2
+:Cha2 rdf:type owl:NamedIndividual ,
+               :Character ;
+      :isPlayedBy :Act1 ;
+      :saysALine :Line2 ,
+                 :Line4 ;
+      :name "Gregory House" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3
+:Cha3 rdf:type owl:NamedIndividual ,
+               :Character ;
+      :isPlayedBy :Act2 ;
+      :saysALine :Line3 ;
+      :name "James Wilson" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2
+:Dir2 rdf:type owl:NamedIndividual ,
+               :Director ;
+      :directs :Epi408 ;
+      :name "Lesli Linka Glatter" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403
+:Epi403 rdf:type owl:NamedIndividual ,
+                 :Episode ;
+        :belongsToSeason :S4 ;
+        :episodeNumber "3"^^xsd:positiveInteger ;
+        :title "97 seconds" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408
+:Epi408 rdf:type owl:NamedIndividual ,
+                 :Episode ;
+        :belongsToSeason :S4 ;
+        :isDirectedBy :Dir2 ;
+        :episodeNumber "8"^^xsd:positiveInteger ;
+        :title "You Don't Want to Know" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1
+:Line1 rdf:type owl:NamedIndividual ,
+                :Line ;
+       :order "1"^^xsd:positiveInteger ;
+       :sentence "No puedes hacer un partido de la atención del paciente" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2
+:Line2 rdf:type owl:NamedIndividual ,
+                :Line ;
+       :order "2"^^xsd:positiveInteger ;
+       :sentence "Sin competir aún seríamos organismos unicelulares" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3
+:Line3 rdf:type owl:NamedIndividual ,
+                :Line ;
+       :order "1"^^xsd:positiveInteger ;
+       :sentence "Pues claro que eres del grupo AB. Receptor universal. Recibes de todo el mundo" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4
+:Line4 rdf:type owl:NamedIndividual ,
+                :Line ;
+       :order "2"^^xsd:positiveInteger ;
+       :sentence "Y tú del grupo OO. Donante universal. No me extraña que pagues tres pensiones." .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1
+:Per1 rdf:type owl:NamedIndividual ,
+               :Person ;
+      :directs :Epi403 ;
+      :name "David Platt" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4
+:S4 rdf:type owl:NamedIndividual ,
+             :Season ;
+    :hasEpisode :Epi403 ,
+                :Epi408 ;
+    :episodes "16"^^xsd:unsignedInt ;
+    :seasonNumber "4"^^xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1
+:Speech1 rdf:type owl:NamedIndividual ,
+                  :Dialogue ;
+         :hasLine :Line1 ,
+                  :Line2 ;
+         :code "04-03-0001" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2
+:Speech2 rdf:type owl:NamedIndividual ,
+                  :Dialogue ;
+         :hasLine :Line3 ,
+                  :Line4 ;
+         :code "04-08-0001" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1
+:Wri1 rdf:type owl:NamedIndividual ,
+               :Writer ;
+      :name "Russel Friend" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2
+:Wri2 rdf:type owl:NamedIndividual ,
+               :Writer ;
+      :name "Garrett Lerner" .
+
+
+###  http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3
+:Wri3 rdf:type owl:NamedIndividual ,
+               :Writer ;
+      :writes :Epi408 ;
+      :name "Sara Hess" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#l> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#e> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#s> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Person ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :directs ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Director ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Person ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :writes ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#s>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Writer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Actor ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :plays ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :saysALine ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#l>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasLine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#l>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
