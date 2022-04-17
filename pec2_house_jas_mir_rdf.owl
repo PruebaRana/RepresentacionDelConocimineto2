@@ -1,0 +1,931 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/manuelir/ontologies/2022/3/house"
+     xml:base="http://www.semanticweb.org/manuelir/ontologies/2022/3/house"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:house="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house">
+        <rdfs:comment>A  House MD dataset
+authors: Jaime Aguilá, Manuel Ibáñez</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:comment>A script belongs to an episode</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"/>
+        <rdfs:comment>An episode belongs to a season</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:comment>A director directs an episode</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:comment>A season has episodes</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <rdfs:comment>A script piece has lines</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"/>
+        <rdfs:comment>An episode has a script</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom"/>
+        <rdfs:comment>A disease has symptom</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"/>
+        <rdfs:comment>An episode is directed by a director</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"/>
+        <rdfs:comment>A character is played by an actor in a episode</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"/>
+        <rdfs:comment>A symptom is from a disease</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"/>
+        <rdfs:comment>A treatment treats a disease</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+        <rdfs:comment>A script is written by writers</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment"/>
+        <rdfs:comment>A disease is treated by a treatment</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"/>
+        <rdfs:comment>An actor plays a character in a episode</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <rdfs:comment>A character says the line in a piece of script</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"/>
+        <rdfs:comment>A writer writes a script</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Code of the piece of a script</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of the episode</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Number of episodes of the season</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of a person</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Order of the line in a script piece</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of the season</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Interaction in a monologue or a dialogue by an actor</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Title of an episode</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"/>
+        <rdfs:comment>Person who acts in a episode</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+        <rdfs:comment>Person played by an actor in a episode</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"/>
+        <rdfs:comment>Day of the month</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis">
+        <rdfs:comment>Identification of an illness by examination of the symptoms</rdfs:comment>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/439401001</rdfs:sameAs>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dbpedia.org/page/Diagnosis</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue"/>
+        <rdfs:comment>Conversation between 2 or more actors</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+        <rdfs:comment>Person who directs an episode</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease">
+        <rdfs:comment>A disorder of structure or function in a person that produces specific symptoms</rdfs:comment>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/64572001</rdfs:sameAs>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dbpedia.org/page/Disease</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Each of the separate programs into which House M. D. is divided.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"/>
+        <rdfs:comment>Hour of the day</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line">
+        <rdfs:comment>Line of a dialogue o monologue sayed by a character</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"/>
+        <rdfs:comment>Speech by one actor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"/>
+        <rdfs:comment>Month of the year</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person">
+        <rdfs:comment>A human being</rdfs:comment>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/125676002</rdfs:sameAs>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dbpedia.org/page/Person</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship">
+        <rdfs:comment>The way in which two characters are connected</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The text of a episode</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece">
+        <rdfs:comment>Piece of a script</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season">
+        <rdfs:comment>A set of episodes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom">
+        <rdfs:comment>Physical or mental feature which is regarded as indicating a condition of disease</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test">
+        <rdfs:comment>A procedure used to identify a disease</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time">
+        <rdfs:comment>Date and time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment">
+        <rdfs:comment>Medical care given to a patient for a disease</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+        <rdfs:comment>Person who writes the script of an episode</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"/>
+        <rdfs:comment>Year</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"/>
+        <house:plays rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2"/>
+        <house:name>Hugh Laurie</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"/>
+        <house:plays rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3"/>
+        <house:name>Robert Sean Leonard</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"/>
+        <house:plays rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1"/>
+        <house:name>Lisa Edelstein</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"/>
+        <house:isPlayedBy rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3"/>
+        <house:saysALine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1"/>
+        <house:name>Lisa Cuddy</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"/>
+        <house:isPlayedBy rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1"/>
+        <house:saysALine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2"/>
+        <house:saysALine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4"/>
+        <house:name>Gregory House</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"/>
+        <house:isPlayedBy rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2"/>
+        <house:saysALine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3"/>
+        <house:name>James Wilson</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"/>
+        <house:directs rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408"/>
+        <house:name>Lesli Linka Glatter</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <house:belongsToSeason rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4"/>
+        <house:episodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</house:episodeNumber>
+        <house:title>97 seconds</house:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"/>
+        <house:belongsToSeason rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4"/>
+        <house:isDirectedBy rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2"/>
+        <house:episodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</house:episodeNumber>
+        <house:title>You Don&apos;t Want to Know</house:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <house:order rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</house:order>
+        <house:sentence>No puedes hacer un partido de la atención del paciente</house:sentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <house:order rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</house:order>
+        <house:sentence>Sin competir aún seríamos organismos unicelulares</house:sentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <house:order rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</house:order>
+        <house:sentence>Pues claro que eres del grupo AB. Receptor universal. Recibes de todo el mundo</house:sentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"/>
+        <house:order rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</house:order>
+        <house:sentence>Y tú del grupo OO. Donante universal. No me extraña que pagues tres pensiones.</house:sentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+        <house:directs rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403"/>
+        <house:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Platt</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"/>
+        <house:hasEpisode rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403"/>
+        <house:hasEpisode rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408"/>
+        <house:episodes rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">16</house:episodes>
+        <house:seasonNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">4</house:seasonNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue"/>
+        <house:hasLine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1"/>
+        <house:hasLine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2"/>
+        <house:code>04-03-0001</house:code>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue"/>
+        <house:hasLine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3"/>
+        <house:hasLine rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4"/>
+        <house:code>04-08-0001</house:code>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+        <house:name>Russel Friend</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+        <house:name>Garrett Lerner</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+        <house:writes rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408"/>
+        <house:name>Sara Hess</house:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#l">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#e"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#l"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#l"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
