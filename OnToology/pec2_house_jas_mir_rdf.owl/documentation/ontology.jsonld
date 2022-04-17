@@ -1,0 +1,1003 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#l"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid17"
+    }, {
+      "@id" : "_:genid15"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid19"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#e"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid24"
+    }, {
+      "@id" : "_:genid22"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid26"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#s"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid10"
+    }, {
+      "@id" : "_:genid8"
+    }, {
+      "@id" : "_:genid6"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid12"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#c"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#l"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#c"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A  House MD dataset\nauthors: Jaime Aguilá, Manuel Ibáñez"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Hugh Laurie"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Robert Sean Leonard"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Lisa Edelstein"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Person who acts in a episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Lisa Cuddy"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Gregory House"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2"
+  }, {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "James Wilson"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Person played by an actor in a episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"
+  }, {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Day of the month"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Identification of an illness by examination of the symptoms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://purl.bioontology.org/ontology/SNOMEDCT/439401001"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://dbpedia.org/page/Diagnosis"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Conversation between 2 or more actors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Lesli Linka Glatter"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Person who directs an episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A disorder of structure or function in a person that produces specific symptoms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://purl.bioontology.org/ontology/SNOMEDCT/64572001"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://dbpedia.org/page/Disease"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title" : [ {
+    "@value" : "97 seconds"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "8"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title" : [ {
+    "@value" : "You Don't Want to Know"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Each of the separate programs into which House M. D. is divided."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Hour of the day"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Line of a dialogue o monologue sayed by a character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence" : [ {
+    "@value" : "No puedes hacer un partido de la atención del paciente"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "2"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence" : [ {
+    "@value" : "Sin competir aún seríamos organismos unicelulares"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence" : [ {
+    "@value" : "Pues claro que eres del grupo AB. Receptor universal. Recibes de todo el mundo"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "2"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence" : [ {
+    "@value" : "Y tú del grupo OO. Donante universal. No me extraña que pagues tres pensiones."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Speech by one actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Month of the year"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "David Platt"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A human being"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://purl.bioontology.org/ontology/SNOMEDCT/125676002"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://dbpedia.org/page/Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The way in which two characters are connected"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt",
+    "@value" : "16"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403"
+  }, {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The text of a episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Piece of a script"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A set of episodes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code" : [ {
+    "@value" : "04-03-0001"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1"
+  }, {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code" : [ {
+    "@value" : "04-08-0001"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3"
+  }, {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Physical or mental feature which is regarded as indicating a condition of disease"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A procedure used to identify a disease"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Date and time"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Medical care given to a patient for a disease"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Russel Friend"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Garrett Lerner"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name" : [ {
+    "@value" : "Sara Hess"
+  } ],
+  "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Person who writes the script of an episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Year"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A script belongs to an episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An episode belongs to a season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Code of the piece of a script"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A director directs an episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Number of the episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Number of episodes of the season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A season has episodes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A script piece has lines"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An episode has a script"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A disease has symptom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An episode is directed by a director"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A character is played by an actor in a episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A symptom is from a disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A treatment treats a disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A script is written by writers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A disease is treated by a treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Name of a person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Order of the line in a script piece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An actor plays a character in a episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A character says the line in a piece of script"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Number of the season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Interaction in a monologue or a dialogue by an actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Title of an episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A writer writes a script"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:swrl:var#a",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#c",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#e",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#l",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#p",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#s",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+} ]

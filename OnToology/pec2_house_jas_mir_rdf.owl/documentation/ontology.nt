@@ -1,0 +1,546 @@
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house> <http://www.w3.org/2000/01/rdf-schema#comment> "A  House MD dataset\nauthors: Jaime Aguilá, Manuel Ibáñez" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode> <http://www.w3.org/2000/01/rdf-schema#comment> "A script belongs to an episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> <http://www.w3.org/2000/01/rdf-schema#comment> "An episode belongs to a season" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> <http://www.w3.org/2000/01/rdf-schema#comment> "A director directs an episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode> <http://www.w3.org/2000/01/rdf-schema#comment> "A season has episodes" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.w3.org/2000/01/rdf-schema#comment> "A script piece has lines" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript> <http://www.w3.org/2000/01/rdf-schema#comment> "An episode has a script" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom> <http://www.w3.org/2000/01/rdf-schema#comment> "A disease has symptom" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An episode is directed by a director" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A character is played by an actor in a episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A symptom is from a disease" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A treatment treats a disease" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A script is written by writers" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "A disease is treated by a treatment" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> <http://www.w3.org/2000/01/rdf-schema#comment> "An actor plays a character in a episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.w3.org/2000/01/rdf-schema#comment> "A character says the line in a piece of script" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes> <http://www.w3.org/2000/01/rdf-schema#comment> "A writer writes a script" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code> <http://www.w3.org/2000/01/rdf-schema#comment> "Code of the piece of a script" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of the episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of episodes of the season" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a person" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> <http://www.w3.org/2000/01/rdf-schema#comment> "Order of the line in a script piece" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of the season" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction in a monologue or a dialogue by an actor" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of an episode" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "Person who acts in a episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> <http://www.w3.org/2000/01/rdf-schema#comment> "Person played by an actor in a episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day> <http://www.w3.org/2000/01/rdf-schema#comment> "Day of the month" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification of an illness by examination of the symptoms" .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://purl.bioontology.org/ontology/SNOMEDCT/439401001"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Diagnosis"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue> <http://www.w3.org/2000/01/rdf-schema#comment> "Conversation between 2 or more actors" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> <http://www.w3.org/2000/01/rdf-schema#comment> "Person who directs an episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> <http://www.w3.org/2000/01/rdf-schema#comment> "A disorder of structure or function in a person that produces specific symptoms" .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://purl.bioontology.org/ontology/SNOMEDCT/64572001"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Disease"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> <http://www.w3.org/2000/01/rdf-schema#comment> "Each of the separate programs into which House M. D. is divided." .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour> <http://www.w3.org/2000/01/rdf-schema#comment> "Hour of the day" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> <http://www.w3.org/2000/01/rdf-schema#comment> "Line of a dialogue o monologue sayed by a character" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue> <http://www.w3.org/2000/01/rdf-schema#comment> "Speech by one actor" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month> <http://www.w3.org/2000/01/rdf-schema#comment> "Month of the year" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A human being" .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://purl.bioontology.org/ontology/SNOMEDCT/125676002"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Person"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship> <http://www.w3.org/2000/01/rdf-schema#comment> "The way in which two characters are connected" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script> <http://www.w3.org/2000/01/rdf-schema#comment> "The text of a episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece> <http://www.w3.org/2000/01/rdf-schema#comment> "Piece of a script" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of episodes" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical or mental feature which is regarded as indicating a condition of disease" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test> <http://www.w3.org/2000/01/rdf-schema#comment> "A procedure used to identify a disease" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment> <http://www.w3.org/2000/01/rdf-schema#comment> "Medical care given to a patient for a disease" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> <http://www.w3.org/2000/01/rdf-schema#comment> "Person who writes the script of an episode" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year> <http://www.w3.org/2000/01/rdf-schema#comment> "Year" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Hugh Laurie" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Robert Sean Leonard" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Lisa Edelstein" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act3> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Lisa Cuddy" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act1> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Gregory House" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Act2> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Cha3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "James Wilson" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Lesli Linka Glatter" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber> "3"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title> "97 seconds" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dir2> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber> "8"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title> "You Don't Want to Know" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> "No puedes hacer un partido de la atención del paciente" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> "2"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> "Sin competir aún seríamos organismos unicelulares" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> "Pues claro que eres del grupo AB. Receptor universal. Recibes de todo el mundo" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order> "2"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence> "Y tú del grupo OO. Donante universal. No me extraña que pagues tres pensiones." .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Per1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "David Platt" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi403> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes> "16"^^<http://www.w3.org/2001/XMLSchema#unsignedInt> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#S4> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber> "4"^^<http://www.w3.org/2001/XMLSchema#unsignedInt> .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line1> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line2> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code> "04-03-0001" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line3> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line4> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Speech2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code> "04-08-0001" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri1> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Russel Friend" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri2> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Garrett Lerner" .
+# 
+# http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Epi408> .
+<http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Wri3> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name> "Sara Hess" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#l> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid13 <http://www.w3.org/2003/11/swrl#body> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid15 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid17 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/2003/11/swrl#head> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid19 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#s> .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid4 <http://www.w3.org/2003/11/swrl#body> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#l> .
+_:genid6 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid6 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid8 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid10 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid4 <http://www.w3.org/2003/11/swrl#head> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#l> .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid12 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
