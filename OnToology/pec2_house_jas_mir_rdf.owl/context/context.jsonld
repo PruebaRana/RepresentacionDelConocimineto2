@@ -1,0 +1,175 @@
+{
+  "@context" : {
+    "Diagnosis" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Diagnosis"
+    },
+    "isTreatmentOf" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isTreatmentOf",
+      "@type" : "@id"
+    },
+    "Script" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Script"
+    },
+    "Line" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Line"
+    },
+    "Relationship" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Relationship"
+    },
+    "Monologue" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Monologue"
+    },
+    "directs" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#directs",
+      "@type" : "@id"
+    },
+    "Director" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Director"
+    },
+    "Test" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Test"
+    },
+    "episodes" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "belongsToSeason" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToSeason",
+      "@type" : "@id"
+    },
+    "plays" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#plays",
+      "@type" : "@id"
+    },
+    "hasSymptom" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasSymptom",
+      "@type" : "@id"
+    },
+    "Character" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Character"
+    },
+    "hasEpisode" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasEpisode",
+      "@type" : "@id"
+    },
+    "Episode" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Episode"
+    },
+    "Disease" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Disease"
+    },
+    "Person" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Person"
+    },
+    "Writer" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Writer"
+    },
+    "Treatment" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Treatment"
+    },
+    "Actor" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Actor"
+    },
+    "name" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isDirectedBy" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isDirectedBy",
+      "@type" : "@id"
+    },
+    "itTreatsWith" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#itTreatsWith",
+      "@type" : "@id"
+    },
+    "saysALine" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#saysALine",
+      "@type" : "@id"
+    },
+    "Symptom" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Symptom"
+    },
+    "Hour" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Hour"
+    },
+    "seasonNumber" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#seasonNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "order" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#order",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "title" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasLine" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasLine",
+      "@type" : "@id"
+    },
+    "Year" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Year"
+    },
+    "isPlayedBy" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isPlayedBy",
+      "@type" : "@id"
+    },
+    "isSymptomOf" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isSymptomOf",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "hasScript" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#hasScript",
+      "@type" : "@id"
+    },
+    "Dialogue" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Dialogue"
+    },
+    "sentence" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#sentence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isWrittenBy" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#isWrittenBy",
+      "@type" : "@id"
+    },
+    "Month" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Month"
+    },
+    "code" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "episodeNumber" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#episodeNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "Season" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Season"
+    },
+    "ScriptPiece" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#ScriptPiece"
+    },
+    "belongsToEpisode" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#belongsToEpisode",
+      "@type" : "@id"
+    },
+    "Time" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Time"
+    },
+    "Day" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#Day"
+    },
+    "writes" : {
+      "@id" : "http://www.semanticweb.org/manuelir/ontologies/2022/3/house#writes",
+      "@type" : "@id"
+    }
+  }
+}
